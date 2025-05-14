@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Calendário de Agendamentos{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Calendário de Agendamentos</h2>
+    <p>Aqui você poderá visualizar os agendamentos.</p>
+    
+    <!-- Navegação do Calendário (Mês Anterior, Mês Atual, Próximo Mês) -->
+    <div class="calendar-nav d-flex justify-content-between align-items-center mb-3">
+        <a href="#" class="btn btn-outline-primary" id="prev-month">&lt; Mês Anterior</a>
+        <h3 id="current-month-year">Maio 2025</h3>
+        <a href="#" class="btn btn-outline-primary" id="next-month">Próximo Mês &gt;</a>
+    </div>
+
+    <!-- Tabela do Calendário -->
+    <table class="table table-bordered calendar-table">
+        <thead>
+            <tr>
+                <th>Dom</th>
+                <th>Seg</th>
+                <th>Ter</th>
+                <th>Qua</th>
+                <th>Qui</th>
+                <th>Sex</th>
+                <th>Sáb</th>
+            </tr>
+        </thead>
+        <tbody id="calendar-body">
+            <!-- Linhas e células do calendário serão geradas por JavaScript -->
+        </tbody>
+    </table>
+
+    <!-- Modal para exibir detalhes do agendamento ou horários disponíveis -->
+    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="appointmentModalLabel">Detalhes do Dia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body-content">
+                    <!-- Conteúdo do modal (agendamentos do dia ou horários) -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Adicionar um placeholder para o script do calendário -->
+<script>
+    // Script para gerar e interagir com o calendário será adicionado aqui
+    // ou em um arquivo JS separado.
+</script>
+
+{% endblock %}
+
